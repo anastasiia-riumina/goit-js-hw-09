@@ -8,10 +8,26 @@
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
-
+@import url('./animations.css');
 
 /* Sections style */
 @import url('./header.css');
-;
 @import url('./back-link.css');
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
